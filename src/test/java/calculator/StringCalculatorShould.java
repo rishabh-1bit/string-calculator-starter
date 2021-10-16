@@ -35,5 +35,18 @@ class StringCalculatorShould {
     	assertEquals(6, stringCalculator.add("1,2\n3"));
     }
     
-    
+    @Test
+    void should_accept_different_syntax_as_delimiters() {
+    	assertEquals(3, stringCalculator.add("//;\n1;2"));
+    }
+    @Test
+    void string_with_negative_integers() {
+    	try {
+    		stringCalculator.add("-1,-2,7");
+    		fail("Exception expected");
+    	}catch(RuntimeException re){
+    		assertEquals("Negatives not allowed!! [-1, -2]", re.getMessage());
+    	}
+    }
+
 }
