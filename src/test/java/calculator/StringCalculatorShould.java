@@ -24,4 +24,10 @@ class StringCalculatorShould {
 
         assertEquals(4, stringCalculator.add("3,1"));
         }
+    @Test
+    void string_with_multiple_number_should_return_result_as_int() {
+
+        assertEquals(6, stringCalculator.add("1,2,3"));
+        }
+    
 }
