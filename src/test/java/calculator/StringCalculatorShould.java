@@ -6,8 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
 	 
-	private static StringCalculator stringCalculator = new StringCalculator();
-    @Test
+	private  StringCalculator stringCalculator = new StringCalculator();
+    
+	@Test
     void empty_string_should_return_0() {
        
         assertEquals(0, stringCalculator.add(""));
@@ -18,4 +19,9 @@ class StringCalculatorShould {
 
         assertEquals(1, stringCalculator.add("1"));
     }
+    @Test
+    void string_with_two_number_should_return_result_as_int() {
+
+        assertEquals(4, stringCalculator.add("3,1"));
+        }
 }
