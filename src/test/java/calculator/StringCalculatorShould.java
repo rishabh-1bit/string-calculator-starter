@@ -30,4 +30,10 @@ class StringCalculatorShould {
         assertEquals(6, stringCalculator.add("1,2,3"));
         }
     
+    @Test
+    void should_accept_NewLine_as_delimiter() {
+    	assertEquals(6, stringCalculator.add("1,2\n3"));
+    }
+    
+    
 }

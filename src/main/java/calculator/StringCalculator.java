@@ -9,19 +9,20 @@ class StringCalculator {
 
 		{
 			int result=0;
-			String[] strings = input.split(",");
+			String[] strings = input.split(",|\n");
 			for(int i=0;i<strings.length;i++) {
 				int num=changeToInt(strings[i] );
 				result+=num;
 			}
 			return result;
-		} 
+		}
+		
 		else {
 			return changeToInt(input);
 		}
-
 	}
 
+	
 	private int changeToInt(String string) throws NumberFormatException {
 		
 		return Integer.parseInt(string);
