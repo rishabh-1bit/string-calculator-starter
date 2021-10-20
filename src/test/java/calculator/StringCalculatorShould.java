@@ -50,7 +50,7 @@ class StringCalculatorShould {
     }
     @Test
     void should_return_42() {
-    	assertEquals(42, stringCalculator.add("1,2,3,6,6,6,4,5,6"));
+    	assertEquals(42, stringCalculator.add("1,6,6,6,4,5,6"));
     }
 
 }
