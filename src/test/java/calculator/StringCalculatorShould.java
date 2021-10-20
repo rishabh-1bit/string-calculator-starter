@@ -48,5 +48,9 @@ class StringCalculatorShould {
     		assertEquals("Negatives not allowed!! [-1, -2]", re.getMessage());
     	}
     }
+    @Test
+    void should_return_42() {
+    	assertEquals(42, stringCalculator.add("1,2,3,6,6,6,4,5,6"));
+    }
 
 }
